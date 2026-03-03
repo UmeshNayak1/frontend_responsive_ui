@@ -1,19 +1,15 @@
 {
-  "name": "backend",
+  "name": "purchase-form-system",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Purchase Form Management System",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "body-parser": "^2.2.2",
-    "cors": "^2.8.6",
+    "cors": "^2.8.5",
     "exceljs": "^4.4.0",
-    "express": "^5.2.1"
+    "express": "^4.18.2"
   }
 }
