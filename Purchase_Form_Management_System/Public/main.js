@@ -30,7 +30,7 @@ async function completePurchase(e) {
     };
 
     try {
-        const response = await fetch("http://localhost:3000/submit", {  // use relative path (important for deployment)
+        const response = await fetch("https://frontend-responsive-ui.onrender.com/submit", {  // use relative path (important for deployment)
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
