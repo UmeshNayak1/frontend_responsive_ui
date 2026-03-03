@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static(path.join(__dirname, "public")));
 
-const FILE_PATH = path.join(__dirname, "submissions.xlsx");
+const FILE_PATH = path.join(__dirname, "/temp/submissions.xlsx");
 
 /* ------------------ Generate Order ID ------------------ */
 function generateOrderId(rowCount) {
