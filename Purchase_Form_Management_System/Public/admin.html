@@ -115,7 +115,7 @@ tr:hover {
 
     <div class="controls">
         <input type="text" id="searchInput" placeholder="Search orders...">
-        <a href="/download">
+        <a href="https://frontend-responsive-ui.onrender.com/download">
             <button class="download-btn">Download Excel</button>
         </a>
     </div>
@@ -133,7 +133,7 @@ tr:hover {
 let allData = [];
 
 async function loadData(){
-    const res = await fetch("/data");
+    const res = await fetch("https://frontend-responsive-ui.onrender.com/data");
     const data = await res.json();
 
     allData = data;
@@ -178,7 +178,7 @@ function renderTable(data){
 async function deleteRow(orderId){
     if(!confirm("Are you sure you want to delete this order?")) return;
 
-    await fetch(`/delete/${orderId}`, { method:"DELETE" });
+    await fetch(`https://frontend-responsive-ui.onrender.com/delete/${orderId}`, { method:"DELETE" });
 
     loadData();
 }
