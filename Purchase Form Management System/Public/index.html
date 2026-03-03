@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Checkout</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Online Purchase Form</h1>
+
+    <form id="checkoutForm">
+
+        <h2>Step 1: Your Details</h2>
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 9852616522" required>
+        </div>
+
+        <h2>Step 2: Delivery Address</h2>
+
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" placeholder="Enter your full address" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="postcode">Post Code</label>
+            <input type="text" id="postcode" name="postcode" required>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" required>
+        </div>
+
+        <h2>Step 3: Card Details</h2>
+
+        <div class="form-group">
+            <span class="label-title">Card Type</span>
+            <div class="card-options">
+                <label for="visa">
+                    <input type="radio" id="visa" name="cardType" value="Visa" required>
+                    Visa
+                </label>
+
+                <label for="amex">
+                    <input type="radio" id="amex" name="cardType" value="AmEx">
+                    AmEx
+                </label>
+
+                <label for="mastercard">
+                    <input type="radio" id="mastercard" name="cardType" value="Mastercard">
+                    Mastercard
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX XXXX XXXX XXXX" required>
+        </div>
+
+        <div class="form-group">
+            <label for="securityCode">Security Code</label>
+            <input type="password" id="securityCode" name="securityCode" placeholder="123" autocomplete="off" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cardName">Name on Card</label>
+            <input type="text" id="cardName" name="cardName" placeholder="Exact name as on card" required>
+        </div>
+
+        <button type="submit">Complete Purchase</button>
+
+    </form>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="successModal">
+    <div class="modal-content">
+        <h3>🎉 Purchase Successful!</h3>
+        <p id="greetingMessage"></p>
+        <button class="close-btn" onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
